@@ -1,0 +1,90 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "ShoppyGlobe API",
+    "dateExported": "2025-08-09",
+    "version": "1.1",
+    "requests": [
+      {
+        "name": "Register",
+        "method": "POST",
+        "url": "http://localhost:5000/api/auth/register",
+        "body": {
+          "type": "json",
+          "raw": {
+            "name": "Pallavi",
+            "email": "pallavi@example.com",
+            "password": "123456"
+          }
+        }
+      },
+      {
+        "name": "Login",
+        "method": "POST",
+        "url": "http://localhost:5000/api/auth/login",
+        "body": {
+          "type": "json",
+          "raw": {
+            "email": "pallavi@example.com",
+            "password": "123456"
+          }
+        }
+      },
+      {
+        "name": "Get All Products",
+        "method": "GET",
+        "url": "http://localhost:5000/api/products"
+      },
+      {
+        "name": "Get Product by ID",
+        "method": "GET",
+        "url": "http://localhost:5000/api/products/{{productId}}",
+        "params": [
+          { "name": "productId", "value": "replace_with_actual_id" }
+        ]
+      },
+      {
+        "name": "Add to Cart",
+        "method": "POST",
+        "url": "http://localhost:5000/api/cart",
+        "headers": [
+          { "name": "Authorization", "value": "Bearer replace_with_token" }
+        ],
+        "body": {
+          "type": "json",
+          "raw": {
+            "productId": "replace_with_product_id",
+            "quantity": 2
+          }
+        }
+      },
+      {
+        "name": "Update Cart Item",
+        "method": "PUT",
+        "url": "http://localhost:5000/api/cart/{{productId}}",
+        "headers": [
+          { "name": "Authorization", "value": "Bearer replace_with_token" }
+        ],
+        "params": [
+          { "name": "productId", "value": "replace_with_product_id" }
+        ],
+        "body": {
+          "type": "json",
+          "raw": {
+            "quantity": 3
+          }
+        }
+      },
+      {
+        "name": "Remove from Cart",
+        "method": "DELETE",
+        "url": "http://localhost:5000/api/cart/{{productId}}",
+        "headers": [
+          { "name": "Authorization", "value": "Bearer replace_with_token" }
+        ],
+        "params": [
+          { "name": "productId", "value": "replace_with_product_id" }
+        ]
+      }
+    ]
+  }
+  
